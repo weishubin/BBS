@@ -12,6 +12,15 @@
         <action name="index">
             <result>/index.jsp</result>
         </action>
+        
+        <action name="welcome" class="com.weishubin.bbs.action.LoginAction" method="welcome">
+            <result name="success">/login.jsp</result>
+        </action>
+       
+        
+        <action name="login" class="com.weishubin.bbs.action.LoginAction">
+            <result name="success">/HelloWorld.jsp</result>
+        </action>
  
     </package>
  
