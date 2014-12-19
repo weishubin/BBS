@@ -11,8 +11,8 @@
 
 <s:form action="login">
  
-  <s:textfield name="userNo" label="用户名" />
-  <s:password name="pwd" label="密码" />
+  <s:textfield name="user.userNo" label="用户名" />
+  <s:password name="user.pwd" label="密码" />
      
   <s:submit value="登录" />
  

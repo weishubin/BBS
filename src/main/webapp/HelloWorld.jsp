@@ -9,7 +9,11 @@
 </head>
 <body>
 
-Welcome!
+
+ 
+   <s:property value="user.userName" />
+     
+
 
 </body>
 </html>

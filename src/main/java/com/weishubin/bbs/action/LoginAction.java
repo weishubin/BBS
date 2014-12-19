@@ -1,9 +1,9 @@
 package com.weishubin.bbs.action;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.inject.Inject;
 import com.weishubin.bbs.model.User;
 import com.weishubin.bbs.service.UserService;
 
@@ -12,6 +12,7 @@ import com.weishubin.bbs.service.UserService;
 public class LoginAction extends ActionSupport {
 	
 
+	@Autowired
 	private UserService userSerivce;
 	
 	private User user;
@@ -20,7 +21,6 @@ public class LoginAction extends ActionSupport {
 		return userSerivce;
 	}
 
-	@Inject
 	public void setUserSerivce(UserService userSerivce) {
 		this.userSerivce = userSerivce;
 	}

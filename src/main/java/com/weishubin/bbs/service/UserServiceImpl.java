@@ -1,21 +1,22 @@
 package com.weishubin.bbs.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.opensymphony.xwork2.inject.Inject;
 import com.weishubin.bbs.dao.UserDao;
 import com.weishubin.bbs.model.User;
 
-@Service
+@Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 
+	@Autowired
 	private UserDao userDao;
 	
 	public UserDao getUserDao() {
 		return userDao;
 	}
 
-	@Inject
+	
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}
@@ -25,11 +26,7 @@ public class UserServiceImpl implements UserService {
 		if (user == null) {
 			return null;
 		} else {
-			if (user.getPwd().equals(pwd)) {
-				return user;
-			} else {
-				return null;
-			}
+			return user;
 		}
 	}
 
