@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `bbs_user_plan` (
+  `plan_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL COMMENT '用户ID',
+  `activity_id` int(10) NOT NULL COMMENT '活动ID',
+  `plan_type` int(1) NOT NULL COMMENT '计划类型,1-参加,2-不参加,3-待定',
+  PRIMARY KEY (`plan_id`),
+  KEY `bbs_user_plan_fk_user` (`user_id`),
+  KEY `bbs_user_plan_fk_activity` (`activity_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8  ;

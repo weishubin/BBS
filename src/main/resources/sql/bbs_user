@@ -1,0 +1,9 @@
+CREATE TABLE `bbs_user` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_no` char(10) NOT NULL COMMENT '用户编号',
+  `user_name` char(40) NOT NULL COMMENT '用户名',
+  `pwd` char(40) NOT NULL COMMENT '密码,md5',
+  `last_login_time` datetime COMMENT '最后登录时间',
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_no` (`user_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 

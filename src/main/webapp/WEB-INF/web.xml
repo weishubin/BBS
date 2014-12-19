@@ -7,7 +7,14 @@
 	
 	<welcome-file-list> 
 		<welcome-file>login.jsp</welcome-file> 
-	</welcome-file-list> 
+	</welcome-file-list>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext*.xml</param-value>
+	</context-param>
+
+	
 
 	<filter>
 		<filter-name>struts2</filter-name>
@@ -18,4 +25,8 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 </web-app>
