@@ -4,17 +4,14 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.weishubin.bbs.service.UserService;
 
 
+@Controller
+@Scope("prototype")
 public class LoginAction extends ActionSupport {
 	
-	private UserService userServer;
+	@Autowired
+	private UserService userSerivce;
 	
-	public UserService getUserServer() {
-		return userServer;
-	}
-
-	public void setUserServer(UserService userServer) {
-		this.userServer = userServer;
-	}
+	
 
 	public String welcome() throws Exception {
         
