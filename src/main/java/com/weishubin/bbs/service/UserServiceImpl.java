@@ -1,5 +1,9 @@
 package com.weishubin.bbs.service;
 
+import org.springframework.stereotype.Service;
+
+import com.opensymphony.xwork2.inject.Inject;
+import com.weishubin.bbs.dao.UserDao;
 import com.weishubin.bbs.model.User;
 
 @Service
@@ -17,7 +21,16 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public User login(String usrNo, String pwd) {
-		return new User();
+		User user = userDao.getUser(usrNo);
+		if (user == null) {
+			return null;
+		} else {
+			if (user.getPwd().equals(pwd)) {
+				return user;
+			} else {
+				return null;
+			}
+		}
 	}
 
 }

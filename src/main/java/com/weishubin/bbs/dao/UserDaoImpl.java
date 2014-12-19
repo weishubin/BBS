@@ -2,6 +2,8 @@ package com.weishubin.bbs.dao;
 
 import java.util.Date;
 
+import org.springframework.stereotype.Repository;
+
 import com.weishubin.bbs.model.User;
 
 @Repository

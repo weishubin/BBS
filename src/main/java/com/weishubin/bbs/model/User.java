@@ -11,6 +11,16 @@ import java.util.Date;
  */
 public class User {
 	private int userId;
+	private String userNo;
+	private String pwd;
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	private String userName;
+	private Date lastLoginTime;
 	public int getUserId() {
 		return userId;
 	}
@@ -35,7 +45,5 @@ public class User {
 	public void setLastLoginTime(Date lastLoginTime) {
 		this.lastLoginTime = lastLoginTime;
 	}
-	private String userNo;
-	private String userName;
-	private Date lastLoginTime;
+	
 }
