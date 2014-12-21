@@ -17,10 +17,17 @@
     <logger name="org.apache.struts2">
     	 <level value="DEBUG" />
     </logger>
+    
+      <logger name="org.apache.ibatis">
+    	 <level value="DEBUG" />
+    </logger>
+    
+    
+   
   
    <!-- for all other loggers log only info and above log messages -->
      <root>
-        <priority value="INFO"/> 
+        <priority value="DEBUG"/> 
         <appender-ref ref="STDOUT" /> 
      </root> 
     

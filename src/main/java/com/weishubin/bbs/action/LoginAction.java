@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.weishubin.bbs.model.User;
+import com.weishubin.bbs.domain.User;
 import com.weishubin.bbs.service.UserService;
 
 
 @Controller
 public class LoginAction extends ActionSupport {
-	
 
 	@Autowired
 	private UserService userSerivce;

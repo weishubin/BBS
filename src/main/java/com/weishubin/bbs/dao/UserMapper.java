@@ -1,7 +1,7 @@
 package com.weishubin.bbs.dao;
 
-import com.weishubin.bbs.model.User;
+import com.weishubin.bbs.domain.User;
 
-public interface UserDao {
+public interface UserMapper {
 	public User getUser(String userNo);
 }

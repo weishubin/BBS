@@ -1,15 +1,22 @@
 /**
  * 
  */
-package com.weishubin.bbs.model;
+package com.weishubin.bbs.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author wei_shubin
  *
  */
-public class User {
+public class User implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private int userId;
 	private String userNo;
 	private String pwd;
