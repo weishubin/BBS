@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.weishubin.bbs.dao.UserPlanMapper">
+
+  <cache />
+  
+  <select id="getUserPlanList" resultType="UserPlan" parameterType="int">
+      SELECT user.user_id as "userId",
+      		 user.user_name as "userName",
+      		 plan_id as "plan_id",
+      		 plan_type as "plan_type",
+      		 activity_id as "activityId"
+      FROM BBS_USER_PLAN PLAN
+      	   JOIN BBS_USER user ON user.USER_ID = PLAN.USER_ID
+      WHERE ACTIVITY_ID = #{activityId}
+  </select>
+</mapper>

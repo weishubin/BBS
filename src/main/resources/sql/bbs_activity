@@ -2,7 +2,7 @@ CREATE TABLE `bbs_activity` (
   `activity_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
    `activity_name` char(40) NOT NULL COMMENT '名称',
   `activity_date` datetime NOT NULL COMMENT '日期',
-  `end_time` time NOT NULL COMMENT '结束时间',
+  `end_time` datetime NOT NULL COMMENT '结束时间',
   `place` char(20) NOT NULL COMMENT '地点',
   `state` char(1) NOT NULL COMMENT '状态,1-计划中,2-已结束,3-取消',
   PRIMARY KEY (`activity_id`),

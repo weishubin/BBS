@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.weishubin.bbs.dao.ActivityMapper">
+
+  <cache />
+  
+  <select id="getActivity" resultType="Activity">
+      SELECT activity_id as "id",
+      		 activity_name as "name",
+      		 activity_date as "startTimeStr",
+      		 end_time as "endTimeStr",
+      		 place,
+      		 state
+      FROM BBS_ACTIVITY
+      WHERE activity_date = (SELECT min(activity_date) FROM BBS_ACTIVITY WHERE state = 1)
+  </select>
+</mapper>

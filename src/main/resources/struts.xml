@@ -21,7 +21,11 @@
         
         <action name="login" class="loginAction">
             <result name="input">/login.jsp</result>
-            <result name="success">/HelloWorld.jsp</result>
+            <result name="success" type="redirectAction">showUserPlan.action</result>
+        </action>
+        
+        <action name="showUserPlan" class="showUserPlanAction">
+            <result name="success">/showUserPlanList.jsp</result>
         </action>
  
     </package>
