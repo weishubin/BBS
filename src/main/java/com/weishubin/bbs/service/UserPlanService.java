@@ -24,4 +24,14 @@ public class UserPlanService {
 	public List<UserPlan> getUserPlanList(int activityId) {
 		return userPlanMapper.getUserPlanList(activityId);
 	}
+	
+	public UserPlan editOrAddUserPlan(UserPlan userPlan) {
+		if (userPlan.getPlanId() == null) { //a new user plan
+			userPlanMapper.insertUserPlan(userPlan);
+		} else {
+			userPlanMapper.updateUserPlan(userPlan);
+		}
+		
+		return userPlanMapper.getUserPlan(userPlan);
+	}
 }

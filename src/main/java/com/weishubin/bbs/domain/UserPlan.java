@@ -7,7 +7,7 @@ public class UserPlan implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 2357104466790568809L;
-	private int planId;
+	private Integer planId;
 	private int planType;
 	private int activityId;
 	private int userId;
@@ -21,10 +21,10 @@ public class UserPlan implements Serializable {
 		this.activityId = activityId;
 	}
 	
-	public int getPlanId() {
+	public Integer getPlanId() {
 		return planId;
 	}
-	public void setPlanId(int planId) {
+	public void setPlanId(Integer planId) {
 		this.planId = planId;
 	}
 	public int getPlanType() {

@@ -4,16 +4,46 @@
 
 <mapper namespace="com.weishubin.bbs.dao.UserPlanMapper">
 
-  <cache />
-  
-  <select id="getUserPlanList" resultType="UserPlan" parameterType="int">
-      SELECT user.user_id as "userId",
-      		 user.user_name as "userName",
-      		 plan_id as "plan_id",
-      		 plan_type as "plan_type",
-      		 activity_id as "activityId"
-      FROM BBS_USER_PLAN PLAN
-      	   JOIN BBS_USER user ON user.USER_ID = PLAN.USER_ID
-      WHERE ACTIVITY_ID = #{activityId}
-  </select>
+	<cache />
+
+	<select id="getUserPlanList" resultType="UserPlan"
+		parameterType="int">
+		SELECT user.user_id as "userId",
+		user.user_name as
+		"userName",
+		plan_id as "plan_id",
+		plan_type as "plan_type",
+		activity_id
+		as "activityId"
+		FROM BBS_USER_PLAN PLAN
+		JOIN BBS_USER user ON
+		user.USER_ID = PLAN.USER_ID
+		WHERE ACTIVITY_ID = #{activityId}
+	</select>
+
+	<!-- Get by userId and activityId -->
+	<select id="getUserPlan" resultType="UserPlan" parameterType="UserPlan">
+		SELECT user.user_id as "userId",
+		user.user_name as "userName",
+		plan_id
+		as "plan_id",
+		plan_type as "plan_type",
+		activity_id as "activityId"
+		FROM
+		BBS_USER_PLAN PLAN
+		JOIN BBS_USER user ON user.USER_ID = PLAN.USER_ID
+		WHERE USER_ID = #{userId} AND ACTIVITY_ID = {#activityId}
+	</select>
+
+	<update id="updateUserPlan" parameterType="UserPlan">
+		UPDATE BBS_USER_PLAN
+		SET PLAN_TYPE = #{planType}
+		WHERE PLAN_ID = #{planId}
+	</update>
+
+	<insert id="insertUserPlan" useGeneratedKeys="true" keyProperty="planId" parameterType="UserPlan">
+		insert into BBS_USER_PLAN (USER_ID, ACTIVITY_ID, PLAN_TYPE)
+		values (#{userId},#{activityId},#{planType})
+	</insert>
+
 </mapper>

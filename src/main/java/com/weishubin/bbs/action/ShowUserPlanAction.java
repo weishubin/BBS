@@ -2,18 +2,14 @@ package com.weishubin.bbs.action;
 
 import java.util.List;
 
-import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.weishubin.bbs.dao.UserPlanMapper;
 import com.weishubin.bbs.domain.Activity;
-import com.weishubin.bbs.domain.User;
 import com.weishubin.bbs.domain.UserPlan;
 import com.weishubin.bbs.service.ActivityService;
 import com.weishubin.bbs.service.UserPlanService;
-import com.weishubin.bbs.util.R;
 
 @Controller
 public class ShowUserPlanAction extends ActionSupport {
