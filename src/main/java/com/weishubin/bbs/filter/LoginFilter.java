@@ -48,7 +48,7 @@ public class LoginFilter implements Filter {
 		boolean isLogin = session.getAttribute(R.USER_ID) != null;
 		if (!path.equals(loginUrl) && !path.equals(loginActionUrl) && !isLogin) {
 			logger.debug("not login, redirect");
-			resp.sendRedirect(request.getContextPath() + loginUrl);
+			resp.sendRedirect(request.getContextPath() + loginActionUrl);
 		} else {
 			logger.debug("login");
 			chain.doFilter(r, p);
