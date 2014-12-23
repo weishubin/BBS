@@ -1,0 +1,241 @@
+
+h1 {
+	display: inline !important;
+	font-size: 20px !important;	
+	line-height: 1.2em !important;
+	color:#FFF !important;
+}
+
+h2 {
+	font-size: 13px !important;
+	line-height: 1.4em !important;
+	color: #EEE !important;
+}
+
+#category_bar_wrapper {
+	width: 900px;
+	margin: 0 auto;
+	text-align: left;		
+}
+
+.category_bar {
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color:#FFF;
+	width: 100px;
+	position:relative;
+	overflow: hidden;
+	text-align:center;
+	/* background-color:#9cd3f2; */
+	/* background-color: #da9874; */
+	background-color: #ed7816;
+	box-shadow: 0 1px 2px #9D9D9D;
+	-moz-box-shadow: 0 1px 2px #9D9D9D;
+	-webkit-box-shadow: 0 1px 2px #9D9D9D;
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 15px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 5px;
+
+}
+
+/* ----------------------- begin layout ---------------------------- */
+.api_article {
+  width: 240px;
+  margin: 10px;
+  float: left;
+}
+
+#container {
+	width: 920px;
+	margin: 10px auto;
+}
+
+/* ----------------------- end layout ------------------------------- */
+
+/* ------------------------ begin ezNews  --------------------------- */
+
+.api_article {
+	clear:both;
+	padding: 20px;
+/*
+	margin-top: 4px;
+	margin-bottom: 10px;
+*/	
+	padding-bottom: 2px;
+	position:relative;
+	overflow: hidden;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 1px 3px #9D9D9D;
+	-moz-box-shadow: 0 1px 3px #9D9D9D;
+	-webkit-box-shadow: 0 1px 3px #9D9D9D;	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+}
+.api_article_image {
+	float: center;
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	border: #DDD 1px solid;
+	margin: 2px 0px 8px 0;
+	position: relative;
+	z-index: 5;
+	zoom: 1;
+	overflow: hidden;
+}
+
+.api_article_title {
+	/* font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif !important; */
+	cursor:pointer;
+	cursor:hand;	
+	margin-top: 0px;
+	margin-bottom: 8px;
+	font-weight:bold;
+	font-size: 16px;
+	color:#333;	/* color of the news title */
+	text-decoration:none;
+	line-height: 1.3em	
+}
+
+.api_article_title a {
+	text-decoration:none;
+	color:#333;	/* color of the news title */
+}
+.api_article_excerpt {
+	/* font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif !important; */
+	font-size: 13px;
+	color:#666666;
+	line-height: 1.4em;
+	margin-bottom: 12px;	
+}
+.api_article_info {
+	/* font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif !important; */
+	font-size: 13px;
+	color:#999;
+	line-height: 1.4em;		
+}
+ul.news_archive  {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li.news_archive {
+	line-height: 1.8em;
+	list-style:none;	
+}
+
+ul.news_short  {
+	/* font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif !important; */
+	font-size: 13px;	
+	margin-left: 1.3em;
+	padding-left: 0;
+}
+
+li.news_short {
+	line-height: 1.6em;
+}
+
+li.news_short a {
+	color:#900;
+	text-decoration:none;	
+}
+
+.news_archive {
+	line-height: 1.8em;	
+}
+
+.news_archive a {
+	text-decoration: none;	
+}
+
+.news_source_name {
+	display: inline-block;
+	padding: 6px 70px 6px 70px;
+	margin-right: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 15px;
+	line-height: 0.7em;
+	background: #C1C1C1;
+	color: #FFF !important; 
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	border-radius: 2px !important;		
+}
+
+.news_source_name a{
+	color: #FFF;	
+}
+
+.inline_ad {
+	margin: 0 auto;
+	text-align:center;	
+	padding-bottom: 20px;
+}
+
+.inline_ad img {
+	border:none;
+}
+
+/* ------------------------ end ezNews  --------------------------- */  
+
+/* ----------------------- begin back to top button --------------------------- */
+#backtotop {
+	position: fixed;
+	right:0px;
+	bottom:15px;
+	display:none;/*hid the button first*/
+}
+#backtotop a {
+	text-decoration:none;
+	border:0 none;
+	display:block;
+	width:70px;
+	height:59px;
+}
+#backtotop a:hover {
+	opacity:.8; /*mouse over fade effect*/
+}
+.clrb {
+	clear:both;
+}
+#maindiv {
+	width:800px;
+	border:1px solid #999;
+	margin:auto;
+	padding:20px;
+}
+/* ----------------------- end back to top button --------------------------- */
+
+/* -------------------------- share button ----------------------------------*/
+.share_button {
+	text-align:right !important;
+	float: right !important; 
+	margin-top: 0px !important; 
+	margin-bottom:10px !important;
+}
+
+
+/* Infinite Scroll loader */
+#infscr-loading {
+  visibility:hidden;
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  left: 45%;
+  bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  background: #000; 
+  opacity: 0.8;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}

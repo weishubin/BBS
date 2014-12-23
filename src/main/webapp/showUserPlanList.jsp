@@ -7,15 +7,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>参加活动的人员</title>
 </head>
+
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/pin_css.css" type="text/css">
+
 <body>
 
-<table>
-	<tr>
-		<s:iterator value="userPlanList" id="userPlan">
- 		 	<td><s:property value="#userPlan.userName" /></td>
-  		</s:iterator>
- 	</tr>
-</table>
+<div id="container" style="position: relative; height: 10442px;">
+
+<div class='api_article' id='114863' style="position: absolute; top: 0px; left: 0px;">
+<div class='api_article_title'>魏书斌</div>
+<img class='api_article_image' src="img/p.jpg" width="150" height="150"/>
+</div>
+
+<div class='api_article' id='114863' style="position: absolute; top: 0px; left: 300px;">
+<div class='api_article_title'>杨智</div>
+<img class='api_article_image' src="img/p.jpg" width="150" height="150"/>
+</div>
+
+
+<div class='api_article' id='114863' style="position: absolute; top: 0px; left: 600px;">
+<div class='api_article_title'>杨智</div>
+<img class='api_article_image' src="img/p.jpg" width="150" height="150"/>
+</div>
+
+</div> 
 
 </body>
 </html>
