@@ -8,7 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.weishubin.bbs.domain.UserPlan;
 
 
-public class EditUserPlanAction extends ActionSupport implements SessionAware {
+public class EditUserStatusAction extends ActionSupport implements SessionAware {
 	private Map<String, Object> session;
 	
 	//need userId, activityId, planType, planId

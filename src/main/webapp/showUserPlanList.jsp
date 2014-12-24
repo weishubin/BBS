@@ -6,12 +6,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>参加活动的人员</title>
-</head>
 
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="js/jquery-1.11.2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="js/bootstrap.min.js"></script>
+ 
 <link rel="stylesheet" href="css/main.css" type="text/css">
 <link rel="stylesheet" href="css/pin_css.css" type="text/css">
+</head>
+
 
 <body>
+
+<%@ include file="nav.jsp"%>
 
 <div id="container" style="position: relative; height: 10442px;">
 
