@@ -1,7 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
     
 <nav class="navbar navbar-default">
+
+ 
+	 <script>
+		function changeURL(obj, url) {
+			var a = $(obj).parent();
+			a.attr("class", "active")
+			alert(a);
+		}
+	 </script>
+ 
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -17,8 +28,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">签到</a></li>
-        <li><a href="#">参加人员</a></li>
+        <%
+			String page3 = request.getParameter("page");
+		%>
+        <li class="<%if ("editUserStatus".equals(page3) ) out.print("active"); %>"><a href="userStatusInput.action">签到</a></li>
+        <li><a href="showUserPlan.action">参加人员</a></li>
 		<li><a href="#">活动管理</a></li>
         
       </ul>

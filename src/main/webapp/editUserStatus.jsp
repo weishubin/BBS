@@ -48,7 +48,11 @@
 
 <body>
 
-<%@ include file="nav.jsp"%>
+
+<jsp:include page="nav.jsp?page=editUserStatus">
+	<jsp:param name="page" value="editUserStatus" />
+</jsp:include>
+
 
 <s:hidden name="activityId" value="%{activity.id}" />
 
