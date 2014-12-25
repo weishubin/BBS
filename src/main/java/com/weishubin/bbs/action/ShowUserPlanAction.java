@@ -55,7 +55,7 @@ public class ShowUserPlanAction extends ActionSupport {
 	}
 
 	public String execute() throws Exception {
-		activity = activityService.getActivity();
+		activity = activityService.getCurrentActivity();
 		if (activity != null) {
 			userPlanList = userPlanService.getUserPlanList(activity.getId());
 		}

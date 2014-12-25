@@ -6,7 +6,7 @@
 
   <cache />
   
-  <select id="getActivity" resultType="Activity">
+  <select id="getCurrentActivity" resultType="Activity">
       SELECT activity_id as "id",
       		 activity_name as "name",
       		 activity_date as "startTimeStr",

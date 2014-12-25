@@ -8,7 +8,7 @@
     <constant name="struts.devMode" value="true" />
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
  
-    <package name="basicstruts2" extends="struts-default">
+    <package name="basicstruts2" extends="json-default">
  
         <action name="index">
             <result>/index.jsp</result>
@@ -21,7 +21,15 @@
         
         <action name="login" class="loginAction">
             <result name="input">/login.jsp</result>
-            <result name="success" type="redirectAction">showUserPlan.action</result>
+            <result name="success" type="redirectAction">userStatusInput.action</result>
+        </action>
+        
+        <action name="userStatusInput" class="userStatusInputAction">
+            <result name="success">/editUserStatus.jsp</result>
+        </action>
+        
+        <action name="saveUserStatus" class="saveUserStatusAction">
+          	 <result type="json"/>
         </action>
         
         <action name="showUserPlan" class="showUserPlanAction">

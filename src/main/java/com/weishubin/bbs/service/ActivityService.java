@@ -19,7 +19,11 @@ public class ActivityService {
 		this.activityMapper = activityMapper;
 	}
 
-	public Activity getActivity() {
-		return activityMapper.getActivity();
+	/**
+	 * Get current activity
+	 * @return
+	 */
+	public Activity getCurrentActivity() {
+		return activityMapper.getCurrentActivity();
 	}
 }
